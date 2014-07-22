@@ -1,1 +1,1 @@
-This repository contains my solutions to the assignments of "Inroduction to Data Science" course on coursera. This repository also contains the code for the optional assignments that have been taken by me independently.
+This repository contains my solutions to the assignments of "Inroduction to Data Science" course on Coursera. This repository also contains the code for the optional assignments that have been undertaken by me independently.
