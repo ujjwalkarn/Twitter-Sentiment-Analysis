@@ -1,1 +1,1 @@
-This repository contains my solutions to the assignments of "Inroduction to Data Science" course on Coursera. This repository also contains the code for the optional assignments that have been undertaken by me independently.
+This repository contains the codes I used for sentiment analysis on Twitter livestream data as a part of "Inroduction to Data Science" course on Coursera. 
