@@ -3,12 +3,10 @@ This repository contains a tutorial for carrying out sentiment analysis on Twitt
 As a part of this tutorial, we can do the following:
 
 - Access Twitter live stream and captured tweets using the oauth2 library and Twitter REST API.
-- Find top ten hashtags across the tweet data.
 - Parse raw tweets obtained in JavaScript Object Notation.
 - Compute term frequency histogram of the livestream data for calculating tweet sentiments.
 - Query the raw tweet data for various parameters of interest like hashtags, origin of the tweet.
-
-
+- Find top ten hashtags across the tweet data.
 
 1. Getting Twitter Data
 -------------------
