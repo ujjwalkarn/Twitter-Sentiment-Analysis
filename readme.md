@@ -8,6 +8,7 @@ As a part of this tutorial, we can do the following:
 - Query the raw tweet data for various parameters of interest like hashtags, origin of the tweet.
 - Find top ten hashtags across the tweet data.
 
+
 1. Getting Twitter Data
 -------------------
 To access the live stream, you will need to install the oauth2 library so you can properly authenticate.
