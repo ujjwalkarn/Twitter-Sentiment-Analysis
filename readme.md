@@ -75,7 +75,7 @@ The file `happiest_state.py` contains the code used for deriving the sentiment o
 
 6. Top ten hash tags
 ------------------------------------------
-Write a Python script top_ten.py that computes the ten most frequently occurring hashtags from the data you gathered in Problem 1.
+Write a Python script top_ten.py that computes the ten most frequently occurring hashtags from the data you gathered in Part 1.
 In the tweet file, each line is a Tweet object, as [described in the twitter documentation](https://dev.twitter.com/overview/api/tweets). To find the hashtags, we need not parse the text field; the hashtags have already been extracted by twitter.
 
 The file `top_ten.py` contains the code used for deriving the sentiment of new terms.
