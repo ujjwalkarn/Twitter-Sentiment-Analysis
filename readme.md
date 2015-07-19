@@ -17,17 +17,41 @@ $ pip install oauth2
 The steps below will help you set up your twitter account to be able to access the live stream.
 
 1. Create a twitter account if you do not already have one.
-2. Go to https://dev.twitter.com/apps and log in with your twitter credentials.
+2. Go to [Twitter Dev](https://dev.twitter.com/apps) and log in with your twitter credentials.
 3. Click "Create New App"
 4. Fill out the form and agree to the terms. Put in a dummy website if you don't have one you want to use.
 5. On the next page, click the "API Keys" tab along the top, then scroll all the way down until you see the section "Your Access Token"
 6. Click the button "Create My Access Token". You can Read more about Oauth authorization.
 7. You will now copy four values into `twitterstream.py`. These values are your "API Key", your "API secret", your "Access token" and your "Access token secret". All four should now be visible on the API Keys page. (You may see "API Key" referred to as "Consumer key" in some places in the code or on the web; they are synonyms.) 
 8. Open `twitterstream.py` and set the variables corresponding to the api key, api secret, access token, and access secret. You will see code like the below:
-  - api_key = "<Enter api key>"
-  - api_secret = "<Enter api secret>"
-  - access_token_key = "<Enter your access token key here>"
-  - access_token_secret = "<Enter your access token secret here>"
+  - api_key = "Enter api key"
+  - api_secret = "Enter api secret"
+  - access_token_key = "Enter your access token key here"
+  - access_token_secret = "Enter your access token secret here"
 9. Run the following and make sure you see data flowing and that no errors occur `$ python twitterstream.py > output.txt`
 10. This command pipes the output to a file. Stop the program with Ctrl-C, but wait at least 3 minutes for data to accumulate.
 11. If you wish, modify the file to use the twitter search API to search for specific terms. For example, to search for the term "microsoft", you can pass the following url to the twitterreq function: `https://api.twitter.com/1.1/search/tweets.json?q=microsoft`
+
+2. Deriving the sentiment of each tweet
+------------------------------------------
+For this part, we will compute the sentiment of each tweet based on the sentiment scores of the terms in the tweet. The sentiment of a tweet is equivalent to the sum of the sentiment scores for each term in the tweet.
+
+The file AFINN-111.txt contains a list of pre-computed sentiment scores. Each line in the file contains a word or phrase followed by a sentiment score. Each word or phrase that is found in a tweet but not found in AFINN-111.txt should be given a sentiment score of 0. See the file AFINN-README.txt for more information
+
+You can read the [Twitter documentation](https://dev.twitter.com/overview/api/tweets) to understand what information each tweet contains and how to access it, but it's not too difficult to deduce the structure by direct inspection.
+
+The file `tweet_sentiment.py` contains the code used for deriving the sentiment of each tweet.
+
+3. Deriving the sentiment of new terms
+------------------------------------------
+Here's how you might think about the problem: We know we can use the sentiment-carrying words in AFINN-111.txt to deduce the overall sentiment of a tweet. Once you deduce the sentiment of a tweet, you can work backwards to deduce the sentiment of the non-sentiment carrying words that do not appear in AFINN-111.txt. For example, if the word soccer always appears in proximity with positive words like great and fun, then we can deduce that the term soccer itself carries a positive sentiment.
+
+The following [paper](http://www.cs.cmu.edu/~nasmith/papers/oconnor+balasubramanyan+routledge+smith.icwsm10.pdf) may be helpful for developing a sentiment metric. 
+
+The file `term_sentiment.py` contains the code used for deriving the sentiment of new terms.
+
+4. Computing Term Frequency
+------------------------------------------
+
+
+
