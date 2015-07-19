@@ -8,7 +8,7 @@ As a part of this project, we can do the following:
 - Query the raw tweet data for various parameters of interest like hashtags, origin of the tweet.
 - Find top ten hashtags across the tweet data.
 
-1. Get Twitter Data
+1. Getting Twitter Data
 -------------------
 To access the live stream, you will need to install the oauth2 library so you can properly authenticate.
 ```
@@ -52,6 +52,30 @@ The file `term_sentiment.py` contains the code used for deriving the sentiment o
 
 4. Computing Term Frequency
 ------------------------------------------
+The frequency of a term can be calculated as `[# of occurrences of the term in all tweets]/[# of occurrences of all terms in all tweets]`
+
+The file `frequency.py` contains the code used for deriving the sentiment of new terms.
 
 
+5. Which State is happiest?
+------------------------------------------
+Assume the tweet file contains data formatted the same way as the livestream data.
 
+There are different ways you might assign a location to a tweet. Here are three:
+
+- Use the coordinates field (a part of the place object, if it exists, to geocode the tweet. This method gives the most reliable location information, but unfortunately this field is not always available and you must figure out some way of translating the coordinates into a state.
+- Use the other metadata in the place field. Much of this information is hand-entered by the twitter user and may not always be present or reliable, and may not typically contain a state name.
+- Use the user field to determine the twitter user's home city and state. This location does not necessarily correspond to the location where the tweet was posted, but it's reasonable to use it as a proxy.
+
+You may find it useful to use this [python dictionary of state abbreviations](http://code.activestate.com/recipes/577305-python-dictionary-of-us-states-and-territories/). In this file, each line is a Tweet object, as [described in the twitter documentation](https://dev.twitter.com/overview/api/tweets). We can ignore any tweets for which you cannot assign a location in the United States. 
+
+Note: Not every tweet will have a text field - again, real data is dirty! Be prepared to debug, and feel free to throw out tweets that your code can't handle to get something working. For example, here we ignore all non-English tweets.
+
+The file `happiest_state.py` contains the code used for deriving the sentiment of new terms.
+
+6. Top ten hash tags
+------------------------------------------
+Write a Python script top_ten.py that computes the ten most frequently occurring hashtags from the data you gathered in Problem 1.
+In the tweet file, each line is a Tweet object, as [described in the twitter documentation](https://dev.twitter.com/overview/api/tweets). To find the hashtags, we need not parse the text field; the hashtags have already been extracted by twitter.
+
+The file `top_ten.py` contains the code used for deriving the sentiment of new terms.
