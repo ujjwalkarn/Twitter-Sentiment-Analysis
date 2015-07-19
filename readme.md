@@ -1,6 +1,6 @@
-This repository contains the codes for carrying out sentiment analysis on Twitter livestream data. 
+This repository contains a tutorial for carrying out sentiment analysis on Twitter livestream data. 
 
-As a part of this project, we can do the following:
+As a part of this tutorial, we can do the following:
 
 - Access Twitter live stream and captured tweets using the oauth2 library and Twitter REST API.
 - Parse raw tweets obtained in JavaScript Object Notation.
