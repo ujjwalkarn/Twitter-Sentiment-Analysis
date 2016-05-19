@@ -79,3 +79,6 @@ Write a Python script top_ten.py that computes the ten most frequently occurring
 In the tweet file, each line is a Tweet object, as [described in the twitter documentation](https://dev.twitter.com/overview/api/tweets). To find the hashtags, we need not parse the text field; the hashtags have already been extracted by twitter.
 
 The file `top_ten.py` contains the code used for deriving the sentiment of new terms.
+
+##Credits
+These instructions were provided as a part of an assignment for the online course 'Introduction to Data Science' on Coursera. You can view the relvant assignment [here](https://class.coursera.org/datasci-002/assignment/view?assignment_id=3).
