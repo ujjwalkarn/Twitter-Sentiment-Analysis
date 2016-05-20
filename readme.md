@@ -81,4 +81,4 @@ In the tweet file, each line is a Tweet object, as [described in the twitter doc
 The file `top_ten.py` contains the code used for deriving the sentiment of new terms.
 
 ##Credits
-These instructions were provided as a part of an assignment for the online course 'Introduction to Data Science' on Coursera. You can view the relvant assignment [here](https://class.coursera.org/datasci-002/assignment/view?assignment_id=3).
+These instructions were provided as a part of an assignment for the online course 'Introduction to Data Science' on Coursera. You can view the relevant assignment [here](https://class.coursera.org/datasci-002/assignment/view?assignment_id=3).
