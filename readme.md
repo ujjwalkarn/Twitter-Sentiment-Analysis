@@ -1,3 +1,5 @@
+### Disclaimer: This tutorial and the code in this repository is pretty old and is not supported anymore. I would recommend using newer tutorials available on the web in case you want to try sentiment analysis on Twitter data.
+
 This repository contains a tutorial for carrying out sentiment analysis on Twitter livestream data. 
 
 As a part of this tutorial, we can do the following:
